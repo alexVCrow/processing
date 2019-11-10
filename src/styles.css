@@ -9,3 +9,10 @@
 .is-inactive {
   background-color: white;
 }
+
+@media (max-width: 900px) {
+  .card-deck {
+    display: flex;
+    flex-direction: column;
+  }
+}
