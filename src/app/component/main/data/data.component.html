@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header bg-ultraviolet text-center" appCursor (click)="getData()">Data</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="card-table table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Data</th>
+          <th scope="col">Path</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let dt of items; let i = index; trackBy:identify" appCursor
+            [ngClass]="{'bg-ultraviolet': isActiveClass(i),'is-inactive': !isActiveClass(i)}"
+            (click)="addToRequest(dt.data, i)">
+          <td>{{i + 1}}</td>
+          <td>{{dt.data}}</td>
+          <td>{{dt.path}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

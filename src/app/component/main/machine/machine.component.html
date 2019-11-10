@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header bg-ultraviolet text-center" appCursor (click)="getData()">Machines</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="card-table table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Machine</th>
+          <th scope="col">Cpu</th>
+          <th scope="col">Memory</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let machine of items; let i = index; trackBy:identify" appCursor
+            [ngClass]="{'bg-ultraviolet': isActiveClass(i), 'is-inactive': !isActiveClass(i)}"
+            (click)="addToRequest(machine.machine, i)">
+          <td>{{i + 1}}</td>
+          <td>{{machine.machine}}</td>
+          <td>{{machine.cpu}}</td>
+          <td>{{machine.memory}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
