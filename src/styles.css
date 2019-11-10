@@ -2,3 +2,10 @@
   background: #9f78ff;
   color: white;
 }
+.bg-ultraviolet-light {
+  background: #C9BFFF;
+  color: white;
+}
+.is-inactive {
+  background-color: white;
+}

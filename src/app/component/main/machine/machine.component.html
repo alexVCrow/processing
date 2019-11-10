@@ -13,7 +13,7 @@
         </thead>
         <tbody>
         <tr *ngFor="let machine of items; let i = index; trackBy:identify" appCursor
-            [ngClass]="{'bg-ultraviolet': isActiveClass(i), 'is-inactive': !isActiveClass(i)}"
+            [ngClass]="{'bg-ultraviolet-light': isActiveClass(i), 'is-inactive': !isActiveClass(i)}"
             (click)="addToRequest(machine.machine, i)">
           <td>{{i + 1}}</td>
           <td>{{machine.machine}}</td>

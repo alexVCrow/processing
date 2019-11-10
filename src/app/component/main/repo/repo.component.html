@@ -12,7 +12,7 @@
         </thead>
         <tbody>
         <tr *ngFor="let repo of items; let i = index; trackBy:identify" appCursor
-            [ngClass]="{'bg-ultraviolet': isActiveClass(i), 'is-inactive': !isActiveClass(i)}"
+            [ngClass]="{'bg-ultraviolet-light': isActiveClass(i), 'is-inactive': !isActiveClass(i)}"
             (click)="addToRequest(repo.repo, i)">
           <td>{{i + 1}}</td>
           <td>{{repo.repo}}</td>
