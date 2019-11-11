@@ -9,10 +9,20 @@
 .is-inactive {
   background-color: white;
 }
-
+.card-deck .d-flex {
+  margin-right: 1rem;
+}
 @media (max-width: 900px) {
   .card-deck {
-    display: flex;
     flex-direction: column;
+  }
+  .card-deck .card {
+    margin-bottom: 1.0em;
+  }
+  .card-deck .d-flex .btn {
+    width: 50%;
+  }
+  .card-deck .d-flex {
+    margin-right: 0;
   }
 }
